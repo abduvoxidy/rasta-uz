@@ -1,0 +1,53 @@
+@import "styles/unit.scss";
+
+.dialog {
+  padding: rem(24);
+  width: rem(361);
+  p {
+    &:first-child {
+      font-weight: 600;
+      font-size: rem(22);
+      line-height: rem(28);
+    }
+    &:nth-child(2) {
+      font-size: rem(15);
+      margin-top: rem(8);
+      line-height: rem(18);
+      color: #5b6871;
+    }
+  }
+  .groupButton {
+    display: flex;
+    margin-top: rem(24);
+    row-gap: rem(12);
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .dialog {
+    width: 100%;
+    padding: rem(16);
+    p {
+      &:first-child {
+        font-size: rem(24);
+        line-height: rem(32);
+      }
+      &:nth-child(2) {
+        font-weight: 400;
+        font-size: rem(17);
+        line-height: rem(22);
+        margin-top: rem(16);
+        color: var(--text-secondary-color);
+      }
+    }
+    .groupButton {
+      margin-top: rem(16);
+
+      button {
+        font-size: rem(15);
+        line-height: rem(20);
+      }
+    }
+  }
+}

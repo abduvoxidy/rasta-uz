@@ -1,0 +1,68 @@
+@import "styles/unit.scss";
+
+.root {
+  width: 80vw;
+  .leftHead {
+    padding: rem(16);
+    padding-bottom: 0;
+    position: relative;
+    height: rem(66);
+    display: flex;
+    align-items: center;
+    .logo {
+      position: absolute;
+      top: rem(16);
+      left: calc(50% - rem(70));
+      a {
+        display: flex;
+        svg {
+          height: rem(50);
+        }
+      }
+    }
+    .closeIcon {
+      display: flex;
+    }
+  }
+  .leftBody {
+    margin-top: rem(40);
+    .item:first-child {
+      box-shadow: inset 0px -1px 0px #e5e9eb;
+    }
+    .item {
+      padding: rem(16);
+      display: flex;
+      gap: rem(16);
+      align-items: center;
+      .icon {
+        width: rem(24);
+      }
+    }
+    .accordian {
+      .image {
+        width: rem(20);
+        height: rem(20);
+      }
+      .img {
+        width: rem(16);
+        height: rem(16);
+      }
+      .langTitle {
+        display: flex;
+        align-items: center;
+        column-gap: rem(18);
+      }
+    }
+  }
+  .leftFooter {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: inset 0px 1px 0px #e5e9eb;
+    display: flex;
+    align-items: center;
+    gap: rem(16);
+    padding: rem(23) rem(16);
+  }
+}

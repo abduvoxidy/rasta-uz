@@ -1,0 +1,119 @@
+@import "styles/unit.scss";
+.product {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+  border-radius: rem(6);
+  cursor: pointer;
+  &.disabled {
+    cursor: auto;
+    .img {
+      img {
+        -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+        filter: grayscale(100%);
+      }
+    }
+    .info {
+      p {
+        color: #9aa6ac;
+      }
+      span {
+        font-weight: 500;
+        font-size: rem(17);
+        line-height: rem(22);
+        color: #f2271c;
+        margin-top: rem(12);
+        display: block;
+      }
+    }
+  }
+  .info {
+    padding: rem(20) rem(16);
+    width: 70%;
+    height: rem(134);
+    p {
+      font-weight: 500;
+      font-size: rem(17);
+      line-height: rem(22);
+      &:first-child {
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      &:nth-child(2) {
+        font-weight: 400;
+        font-size: rem(15);
+        line-height: rem(18);
+        color: #9aa6ac;
+        margin-top: rem(4);
+        height: rem(36);
+        overflow: hidden;
+      }
+      &:last-child {
+        margin-top: rem(12);
+        color: var(--primary-color);
+      }
+    }
+  }
+  // &:hover {
+  //   .img {
+  //     img {
+  //       transform: scale(1.15);
+  //     }
+  //   }
+  // }
+  .img {
+    width: 30%;
+    height: 100%;
+    position: relative;
+    border-radius: 0 rem(8) rem(8) 0;
+    overflow: hidden;
+    .quantity {
+      min-width: rem(28);
+      height: rem(28);
+      border-radius: 50%;
+      font-weight: 600;
+      font-size: rem(13);
+      line-height: rem(18);
+      color: #fff;
+      background-color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      top: rem(8);
+      right: rem(10);
+      z-index: 9;
+    }
+    img {
+      transition: transform 0.3s linear;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .product {
+    justify-content: space-between;
+    .info {
+      height: rem(122);
+      padding: rem(16);
+
+      p {
+        font-size: rem(15);
+        line-height: rem(20);
+      }
+    }
+    .img {
+      width: rem(120);
+      .quantity {
+        min-width: rem(20);
+        height: rem(20);
+        font-weight: 400;
+        font-size: rem(12);
+        line-height: rem(16);
+      }
+    }
+  }
+}

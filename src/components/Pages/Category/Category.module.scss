@@ -1,0 +1,21 @@
+@import 'styles/unit.scss';
+
+.main {
+  padding: rem(32) 0 rem(46);
+  background-color: #f9f9f9;
+  p {
+    font-weight: 700;
+    font-size: rem(40);
+    line-height: rem(48);
+    margin-bottom: rem(24);
+  }
+  .list {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    column-gap: rem(24);
+    row-gap: rem(24);
+    .item {
+      padding: 0;
+    }
+  }
+}

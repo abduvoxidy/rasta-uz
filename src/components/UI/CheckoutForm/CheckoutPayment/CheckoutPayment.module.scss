@@ -1,0 +1,89 @@
+@import "styles/unit.scss";
+
+.payment {
+  .list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(16);
+    .item {
+      height: rem(72);
+      cursor: pointer;
+      border-radius: rem(12);
+      padding: rem(16);
+      background: #f4f4f4;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .checkbox {
+        width: rem(20);
+        height: rem(20);
+        border: 1px solid #e5e9eb;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+      .info {
+        display: flex;
+        align-items: center;
+        column-gap: rem(12);
+        .name {
+          display: flex;
+          flex-direction: column;
+
+          span {
+            font-weight: 600;
+            font-size: rem(17);
+            line-height: rem(22);
+          }
+          .expireDate {
+            font-size: rem(13);
+            line-height: rem(18);
+            color: var(--text-secondary-color);
+          }
+        }
+      }
+    }
+    .notChecked {
+      border: 1px solid var(--danger-color);
+    }
+    .addCard {
+      .addBtn {
+        height: rem(48);
+        max-width: rem(238);
+        float: right;
+        font-size: rem(15);
+        line-height: rem(20);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .payment {
+    .list {
+      row-gap: rem(12);
+      .item {
+        height: rem(64);
+        .info {
+          .name {
+            span {
+              font-weight: 500;
+              font-size: rem(15);
+              line-height: rem(22);
+            }
+            .expireDate {
+              font-size: rem(13);
+              line-height: rem(18);
+              font-weight: 400;
+            }
+          }
+        }
+      }
+      .addCard {
+        .addBtn {
+          max-width: 100%;
+          float: auto;
+        }
+      }
+    }
+  }
+}

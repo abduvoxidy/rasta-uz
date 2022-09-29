@@ -1,0 +1,47 @@
+@import "styles/unit.scss";
+
+.root {
+  .header {
+    padding: rem(16) rem(14);
+    box-shadow: inset 0px -1px 0px #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    h3 {
+      font-weight: 700;
+      font-size: rem(22);
+      line-height: rem(28);
+    }
+  }
+  .body {
+    padding: rem(14);
+    h3 {
+      font-weight: 600;
+      font-size: rem(17);
+      line-height: rem(22);
+    }
+    .address {
+      p {
+        color: var(--text-secondary-color);
+        font-size: rem(15);
+        line-height: rem(24);
+        margin: rem(6) 0 rem(20);
+      }
+    }
+    .workTime {
+      .weekDays {
+        .item {
+          display: flex;
+          justify-content: space-between;
+          margin-top: rem(12);
+          .day {
+            font-size: 15px;
+            line-height: 24px;
+          }
+          .time {
+            color: var(--text-secondary-color);
+          }
+        }
+      }
+    }
+  }
+}

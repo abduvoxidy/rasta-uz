@@ -1,0 +1,119 @@
+@import "styles/unit.scss";
+.tabs {
+  padding-bottom: rem(56);
+  .title {
+    font-weight: 600;
+    font-size: rem(40);
+    line-height: rem(48);
+    color: #303940;
+    margin-bottom: rem(24);
+  }
+  .categorieTabs {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .filterBtn {
+      padding: rem(10) rem(18);
+      background: #f1f1f1;
+      font-size: rem(15);
+      line-height: rem(24);
+      border-radius: rem(12);
+      display: flex;
+      align-items: center;
+      column-gap: rem(7);
+      position: relative;
+      .filterCircle {
+        width: rem(10);
+        height: rem(10);
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: rem(-2);
+        right: rem(-2);
+        background-color: var(--primary-color);
+      }
+    }
+    .categories {
+      display: flex;
+      align-items: center;
+      column-gap: rem(12);
+      .tabItem {
+        padding: rem(10) rem(18);
+        background: #f1f1f1;
+        border-radius: rem(12);
+        font-size: rem(15);
+        line-height: rem(24);
+        transition: all 0.25s ease-in-out;
+        display: flex;
+        align-items: center;
+        white-space: nowrap;
+        position: relative;
+        svg {
+          margin-left: rem(8);
+        }
+        &.active {
+          background-color: var(--primary-color);
+          color: #fff;
+        }
+      }
+    }
+  }
+}
+
+.menus {
+  padding: rem(12) rem(10);
+  max-height: rem(300);
+  overflow: auto;
+
+  .menu {
+    padding: rem(12) rem(14);
+    font-size: rem(17);
+    line-height: rem(22);
+    display: block;
+    background-color: #fff;
+    width: 100%;
+    text-align: left;
+    border-radius: rem(12);
+    transition: all 0.25s ease-in-out;
+    &:hover {
+      background: #f1f1f1;
+    }
+  }
+}
+
+.fixedCategories {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: rem(20) 0;
+  z-index: 999;
+  transition: all 0.25s ease-in-out;
+  transform: translateY(rem(-100));
+  .fixedCategoriesTabs {
+    padding-bottom: 0;
+  }
+  &.fixedHeder {
+    transform: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .tabs {
+    margin-right: rem(-16);
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+      display: none;
+    }
+    .categorieTabs {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .categories {
+        padding-right: rem(16);
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}

@@ -1,0 +1,232 @@
+@import "styles/unit.scss";
+
+.cards {
+  padding: rem(32) 0 rem(158);
+  background-color: #f9f9f9;
+  h1 {
+    font-weight: 700;
+    font-size: rem(40);
+    line-height: rem(48);
+    color: #303940;
+    margin-bottom: rem(32);
+  }
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: rem(25);
+    .rightBox {
+      border-radius: rem(12);
+      .list {
+        display: flex;
+        row-gap: rem(12);
+        flex-direction: column;
+        padding: rem(24);
+        background-color: #fff;
+        h3 {
+          display: none;
+        }
+        .item {
+          padding: rem(14) rem(16);
+          background: #f4f4f4;
+          border-radius: rem(12);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          height: rem(72);
+          &:last-child {
+            cursor: pointer;
+          }
+          .leftItem {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+
+            .cardInfo {
+              span {
+                display: block;
+                font-weight: 600;
+                font-size: rem(17);
+                line-height: rem(22);
+                &:last-child {
+                  font-weight: 400;
+                  font-size: rem(13);
+                  line-height: rem(18);
+                  color: #5b6871;
+                }
+              }
+            }
+          }
+
+          .rightItem {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+            svg {
+              cursor: pointer;
+            }
+          }
+        }
+        .addCard {
+          .addBtn {
+            height: rem(48);
+            max-width: rem(238);
+            float: right;
+            font-size: rem(15);
+            line-height: rem(20);
+          }
+        }
+      }
+    }
+  }
+}
+
+.cardBox {
+  width: rem(466);
+  padding: rem(36) rem(24) rem(32);
+  position: relative;
+  .close {
+    position: absolute;
+    right: rem(10);
+    top: rem(10);
+    cursor: pointer;
+  }
+  p {
+    font-weight: 600;
+    font-size: rem(28);
+    line-height: rem(35);
+    margin-bottom: rem(24);
+  }
+
+  .input {
+    margin-bottom: rem(16);
+    // &:last-child {
+    //   margin-bottom: rem(24);
+    // }
+    label {
+      font-size: rem(15);
+      line-height: rem(24);
+      color: var(--text-secondary-color);
+      display: block;
+      margin-bottom: rem(4);
+    }
+
+    input {
+      height: rem(44);
+      background: #ffffff;
+      border: 1px solid #e5e9eb;
+      &:focus {
+        outline: none;
+        border-color: #22b573;
+      }
+      &:hover {
+        border-color: #22b573;
+      }
+    }
+  }
+  .reSendCode {
+    color: var(--text-secondary-color);
+    text-align: center;
+    font-size: rem(17);
+    line-height: rem(22);
+    margin: rem(16) 0 rem(24);
+    cursor: pointer;
+  }
+}
+
+.dialog {
+  padding: rem(24);
+  width: rem(361);
+
+  p {
+    &:first-child {
+      font-weight: 600;
+      font-size: rem(22);
+      line-height: rem(28);
+    }
+    &:nth-child(2) {
+      font-size: rem(15);
+      margin-top: rem(12);
+      line-height: rem(18);
+      color: #5b6871;
+    }
+  }
+  .groupButton {
+    display: grid;
+    margin-top: rem(32);
+    column-gap: rem(12);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .cards {
+    min-height: 40vh;
+    padding: rem(16) 0;
+    h1 {
+      display: none;
+    }
+    .box {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      .leftSide {
+        display: none;
+      }
+      .rightBox {
+        border-radius: rem(12);
+        .list {
+          padding: rem(16);
+          border-radius: rem(12);
+          h3 {
+            display: block;
+            font-size: rem(17);
+            line-height: rem(22);
+            font-weight: 600;
+          }
+          .item {
+            padding: rem(12);
+            height: rem(64);
+            &:last-child {
+              cursor: pointer;
+            }
+            .leftItem {
+              .cardInfo {
+                span {
+                  display: block;
+                  font-weight: 500;
+                  font-size: rem(15);
+                }
+              }
+            }
+          }
+          .addCard {
+            .addBtn {
+              max-width: 100%;
+              float: auto;
+            }
+          }
+        }
+      }
+    }
+  }
+  .cardBox {
+    width: 100%;
+    padding: rem(16);
+
+    p {
+      font-size: rem(24);
+      line-height: rem(32);
+      margin-bottom: rem(16);
+    }
+
+    .input {
+      margin-bottom: rem(12);
+    }
+    .greenBtn {
+      margin-top: rem(24);
+    }
+  }
+  .dialog {
+    width: 100%;
+    padding: rem(16);
+  }
+}

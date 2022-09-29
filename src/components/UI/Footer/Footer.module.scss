@@ -1,0 +1,163 @@
+@import "styles/unit.scss";
+.footer {
+  width: 100%;
+  background-color: #fff;
+  .bottomNav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: rem(12) 0;
+    p,
+    li {
+      font-size: rem(17);
+      line-height: rem(22);
+    }
+    .privacyLinks {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      column-gap: rem(32);
+    }
+  }
+  .downloadApp {
+    p {
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: rem(25);
+      color: var(--title-color);
+    }
+    .apps {
+      display: flex;
+      align-items: center;
+      column-gap: rem(16);
+      margin-top: rem(16);
+      img {
+        width: rem(140);
+      }
+    }
+  }
+  .border {
+    height: rem(2);
+    width: 100%;
+    background: rgba(0, 0, 0, 0.12);
+  }
+  .box {
+    padding: rem(40) 0;
+    .list {
+      display: block;
+      list-style: none;
+      li {
+        &:first-child {
+          font-weight: 600;
+          font-size: rem(20);
+          line-height: rem(25);
+          margin-bottom: rem(8);
+        }
+        margin-bottom: rem(12);
+
+        font-size: rem(17);
+        line-height: rem(22);
+        color: #525252;
+      }
+    }
+  }
+  .socialBox {
+    padding: rem(24) 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .socialItem {
+      p {
+        font-size: rem(17);
+        line-height: rem(22);
+        margin-bottom: rem(13);
+      }
+      a {
+        display: flex;
+        max-width: rem(200);
+        align-items: center;
+        font-weight: 600;
+        font-size: rem(17);
+        line-height: rem(22);
+        color: var(--text-color);
+        svg {
+          margin-right: rem(11);
+        }
+      }
+      .socials {
+        display: flex;
+        column-gap: rem(12);
+        cursor: pointer;
+      }
+    }
+  }
+}
+.mobileFooter {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+
+  .mobileFooter {
+    box-shadow: inset -1px 1px 0px #e5e9eb;
+    padding: rem(16) 0;
+    display: block;
+    .container {
+      padding: 0 rem(12);
+      p {
+        font-size: rem(14);
+        line-height: rem(22);
+      }
+      .boxM {
+        .logo {
+          margin-bottom: rem(24);
+          height: rem(58);
+        }
+        .list {
+          display: block;
+          list-style: none;
+          li {
+            font-weight: 400;
+            color: var(--text-secondary-color);
+            font-size: rem(15);
+            line-height: rem(24);
+          }
+        }
+        .apps {
+          display: flex;
+          margin-top: rem(8);
+          gap: rem(16);
+          box-shadow: inset 0px -1px 0px #e5e9eb;
+          margin-bottom: rem(20);
+          img {
+            width: rem(140);
+            margin-bottom: rem(20);
+          }
+        }
+      }
+
+      .socialBox {
+        .socials {
+          margin-top: rem(12);
+          display: flex;
+          align-items: center;
+          gap: rem(12);
+          svg {
+            width: rem(32);
+          }
+        }
+      }
+      .privacy {
+        margin-top: rem(24);
+        color: #252c32;
+      }
+    }
+  }
+
+  .isSearch {
+    display: none;
+  }
+}

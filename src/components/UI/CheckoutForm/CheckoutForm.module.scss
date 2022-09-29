@@ -1,0 +1,145 @@
+@import "styles/unit.scss";
+
+.checkoutBox {
+  display: flex;
+  column-gap: rem(56);
+  .leftSide {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(24);
+  }
+  .rightSide {
+    width: 30%;
+  }
+}
+
+.options {
+  margin: 0 rem(-5);
+  .product {
+    padding: 0 rem(5);
+    .item {
+      background: #f4f4f4;
+      border-radius: rem(12);
+      width: rem(180);
+      overflow: hidden;
+      .buttons {
+        display: flex;
+        justify-content: space-between;
+        margin-top: rem(8);
+      }
+      .img {
+        position: relative;
+        height: rem(130);
+      }
+      .body {
+        padding: rem(12);
+        // margin-top: rem(12);
+        p {
+          font-weight: 600;
+          font-size: rem(17);
+          line-height: rem(22);
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          overflow: hidden;
+        }
+        .measure {
+          font-weight: 400;
+          font-size: rem(15);
+          line-height: rem(24);
+          color: #9d9d9d;
+          margin-top: rem(4);
+        }
+        button {
+          width: 100%;
+          padding: rem(8) rem(10);
+          background-color: #fff;
+          border-radius: rem(10);
+          margin-top: rem(9);
+          font-weight: 500;
+          font-size: rem(15);
+          line-height: rem(22);
+        }
+      }
+    }
+  }
+}
+
+.successPromo,
+.payCardLoading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.payCardLoading {
+  div {
+    margin: 0 !important;
+    display: flex;
+    justify-content: center;
+    transform: translateX(rem(-15));
+  }
+}
+
+@media (max-width: 768px) {
+  .checkoutBox {
+    flex-direction: column;
+    gap: rem(16);
+    .leftSide {
+      width: auto;
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(16);
+      .textareaOrder {
+        textarea {
+          height: rem(104);
+          &::placeholder {
+            font-size: rem(15);
+            line-height: rem(24);
+            font-weight: 400;
+          }
+        }
+      }
+    }
+    .rightSide {
+      width: auto;
+    }
+  }
+  .options {
+    .product {
+      padding: 0 rem(5);
+      .item {
+        width: rem(130);
+        .img {
+          position: relative;
+          height: rem(96);
+        }
+        .body {
+          padding: rem(8);
+          // margin-top: rem(12);
+          .measure {
+            font-weight: 400;
+            font-size: rem(15);
+            line-height: rem(24);
+            color: #9d9d9d;
+            margin-top: rem(4);
+          }
+          button {
+            padding: rem(7) rem(10);
+            font-size: rem(13);
+            line-height: rem(18);
+          }
+        }
+      }
+    }
+  }
+}

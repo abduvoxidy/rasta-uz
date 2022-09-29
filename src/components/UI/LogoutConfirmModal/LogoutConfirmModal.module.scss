@@ -1,0 +1,32 @@
+@import "styles/unit.scss";
+
+.dialog {
+  padding: rem(24);
+  width: rem(361);
+  p {
+    &:first-child {
+      font-weight: 600;
+      font-size: rem(22);
+      line-height: rem(28);
+    }
+    &:nth-child(2) {
+      font-size: rem(15);
+      margin-top: rem(12);
+      line-height: rem(18);
+      color: #5b6871;
+    }
+  }
+  .groupButton {
+    display: grid;
+    margin-top: rem(32);
+    column-gap: rem(12);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dialog {
+    padding: rem(16);
+    width: 100%;
+  }
+}

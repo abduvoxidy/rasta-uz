@@ -1,0 +1,62 @@
+@import "styles/unit.scss";
+
+.root {
+  .date {
+    color: var(--text-secondar-color);
+    font-size: rem(17);
+    line-height: rem(22);
+  }
+  .mainTitle {
+    margin: rem(20) 0 rem(32);
+    font-weight: 700;
+    font-size: rem(40);
+    line-height: rem(48);
+    color: #1a2024;
+    max-width: rem(720);
+  }
+  .description {
+    font-size: rem(20);
+    line-height: rem(30);
+    color: #303940;
+    margin-bottom: rem(32);
+    max-width: rem(954);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  // .title {
+  //   font-weight: 700;
+  //   font-size: rem(24);
+  //   line-height: rem(30);
+  //   margin-bottom: rem(16);
+  // }
+  .image {
+    margin: rem(32) 0;
+    img {
+      border-radius: rem(12);
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .root {
+    .date {
+      font-size: rem(15);
+      line-height: rem(20);
+    }
+    .mainTitle {
+      margin: rem(15) 0 rem(28);
+      font-weight: 600;
+      font-size: rem(32);
+      line-height: rem(40);
+    }
+    .description {
+      font-size: rem(18);
+      line-height: rem(24);
+      margin-bottom: rem(28);
+    }
+    .image {
+      margin: rem(16) 0;
+    }
+  }
+}

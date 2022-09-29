@@ -1,0 +1,10 @@
+@import "styles/unit.scss";
+
+.main {
+  background-color: #f9f9f9;
+  .container {
+    padding-top: 20px;
+    padding-left: rem(12);
+    padding-right: rem(12);
+  }
+}

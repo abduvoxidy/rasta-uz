@@ -1,0 +1,56 @@
+@import "styles/unit.scss";
+
+.dialog {
+  padding: rem(20) rem(24);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: rem(398);
+  p {
+    text-align: center;
+    font-weight: 600;
+    font-size: rem(28);
+    line-height: rem(35);
+  }
+  .desc {
+    font-size: rem(17);
+    line-height: rem(22);
+    color: #5b6871;
+    font-weight: 400;
+  }
+  .img {
+    width: rem(80);
+    height: rem(80);
+    margin: rem(24) 0;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+  }
+  button {
+    margin-top: rem(24);
+    font-weight: 500;
+    font-size: rem(15);
+    line-height: rem(20);
+  }
+}
+
+@media (max-width: 768px) {
+  .dialog {
+    width: 100%;
+    p {
+      font-size: rem(22);
+      line-height: rem(28);
+    }
+    .desc {
+    }
+    .img {
+      img {
+      }
+    }
+    button {
+    }
+  }
+}

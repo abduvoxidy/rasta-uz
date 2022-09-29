@@ -1,0 +1,199 @@
+@import "styles/unit.scss";
+
+.profile {
+  padding: rem(32) 0 rem(158);
+  background-color: #f9f9f9;
+  h1 {
+    font-weight: 700;
+    font-size: rem(40);
+    line-height: rem(48);
+    color: #303940;
+    margin-bottom: rem(32);
+  }
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    column-gap: rem(25);
+    .form {
+      background-color: #fff;
+      border-radius: rem(12);
+      .innerBox {
+        padding: rem(24);
+
+        .inputs {
+          display: flex;
+          flex-direction: column;
+          row-gap: rem(16);
+          .inputBox {
+            label {
+              font-size: rem(15);
+              line-height: rem(24);
+              color: #6f6f6f;
+              display: block;
+              margin-bottom: rem(4);
+            }
+            input {
+              background: #fff;
+              border: 1px solid #e5e9eb;
+            }
+            .dateBirth {
+              .calendar {
+                display: none;
+              }
+            }
+          }
+        }
+        .button {
+          margin-top: rem(24);
+          display: flex;
+          justify-content: flex-end;
+          button {
+            font-weight: 500;
+          }
+        }
+      }
+      .imgBox {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.06);
+        padding-bottom: rem(16);
+        .img {
+          width: rem(104);
+          height: rem(104);
+          margin-top: rem(16);
+          position: relative;
+          overflow: hidden;
+          .loader {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            top: 0;
+            background-color: rgba(0, 0, 0, 0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            svg {
+              color: #fff;
+            }
+          }
+          &:hover {
+            .close {
+              transform: none;
+            }
+          }
+          .close {
+            position: absolute;
+            top: rem(4);
+            right: rem(4);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            transition: all 0.25s ease-in-out;
+            transform: translateY(-40px);
+            path {
+              fill: #fff;
+            }
+          }
+          img {
+            height: 100%;
+            width: 100%;
+            border-radius: 50%;
+          }
+        }
+        .changeImg {
+          margin-top: rem(12);
+          font-size: rem(15);
+          line-height: rem(24);
+          color: var(--primary-color);
+          cursor: pointer;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// responsive
+
+@media (max-width: 768px) {
+  .profile {
+    padding: rem(16) 0;
+    h1 {
+      display: none;
+    }
+    .box {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      .leftSide {
+        display: none;
+      }
+      .form {
+        .innerBox {
+          padding: rem(16);
+
+          .inputs {
+            .inputBox {
+              label {
+                margin-bottom: rem(4);
+              }
+              input {
+                background: #f4f4f4;
+                border: 1px solid #f4f4f4;
+                font-size: rem(15);
+                line-height: rem(24);
+                &[placeholder],
+                [placeholder],
+                *[placeholder] {
+                  color: #1a2024;
+                  font-size: rem(15);
+                  line-height: rem(24);
+                }
+              }
+
+              .dateBirth {
+                position: relative;
+                .calendar {
+                  cursor: pointer;
+                  display: block;
+                  position: absolute;
+                  right: rem(14);
+                  top: rem(14);
+                }
+              }
+            }
+          }
+          .button {
+            margin-top: rem(16);
+            display: flex;
+            justify-content: inherit;
+            button {
+              width: 100%;
+              font-weight: 500;
+              display: flex;
+              justify-content: center;
+              font-size: rem(15);
+              line-height: rem(20);
+            }
+          }
+        }
+        .imgBox {
+          .img {
+            img {
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
+  }
+}

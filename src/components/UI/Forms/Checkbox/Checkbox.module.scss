@@ -1,0 +1,55 @@
+.checkbox {
+  input {
+    width: 13px;
+    height: 13px;
+    margin: -1px;
+    position: absolute;
+    border: 0px;
+    clip: rect(1px, 1px, 1px, 1px);
+    clip-path: inset(50%);
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  .box {
+    &.active {
+      color: rgb(255, 255, 255);
+      background-color: var(--primary-color);
+      border-color: var(--primary-color);
+      transition: background 0.1s cubic-bezier(0.1, 0.8, 0.2, 1) 0s,
+        color 0.1s cubic-bezier(0.1, 0.8, 0.2, 1) 0s,
+        box-shadow 0.1s cubic-bezier(0.1, 0.8, 0.2, 1) 0s;
+      svg {
+        transition: transform 0.25s cubic-bezier(0.4, 1.2, 0.8, 1.4) 0s;
+        transform: scale(1);
+      }
+    }
+    width: 20px;
+    height: 20px;
+    flex-shrink: 0;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    justify-content: center;
+    border-width: 2px;
+    border-style: solid;
+    border-color: #e5e9eb;
+    border-radius: 0.125rem;
+    color: transparent;
+    background-color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: background 0.2s cubic-bezier(0.6, 0, 1, 0.3) 0s,
+      color 0.1s cubic-bezier(0.6, 0, 1, 0.3) 0s,
+      box-shadow 0.1s cubic-bezier(0.6, 0, 1, 0.3) 0s;
+    svg {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      transform: scale(0);
+      transition: transform 0.15s cubic-bezier(0.6, 0, 1, 0.3) 0s;
+    }
+    // &:hover {
+    //   border-color: var(--primary-color);
+    // }
+  }
+}

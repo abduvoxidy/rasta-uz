@@ -1,0 +1,102 @@
+@import "styles/unit.scss";
+
+.rateBox {
+  width: rem(371);
+  padding: rem(32) rem(20) rem(24);
+  .title {
+    font-weight: 600;
+    font-size: rem(28);
+    line-height: rem(35);
+    text-align: center;
+  }
+  &.rateAnimation {
+    width: rem(520);
+    transition: all 0.25s ease-in-out;
+    .box {
+      display: block;
+    }
+  }
+  .types {
+    display: flex;
+    justify-content: center;
+    column-gap: rem(40);
+    margin: rem(24) 0 rem(32);
+    span {
+      display: flex;
+      width: rem(80);
+      height: rem(80);
+      cursor: pointer;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+  .box {
+    display: none;
+    .tipTitle {
+      font-weight: 600;
+      font-size: rem(17);
+      line-height: rem(22);
+      margin: rem(16) 0 rem(12);
+    }
+    .comment {
+      padding-top: rem(16);
+      margin-bottom: rem(24);
+      box-shadow: inset 0px 1px 0px rgba(0, 0, 0, 0.04);
+    }
+    .chooseTip {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      column-gap: rem(8);
+      row-gap: rem(8);
+      margin-bottom: rem(20);
+      overflow-x: hidden;
+      .price {
+        padding: rem(8) rem(18);
+        border-radius: rem(12);
+        background: #f4f4f4;
+        font-size: rem(15);
+        line-height: rem(24);
+        text-align: center;
+        white-space: nowrap;
+        cursor: pointer;
+        &.active {
+          background-color: var(--primary-color);
+          color: #fff;
+        }
+      }
+    }
+    .input {
+      margin-bottom: rem(20);
+    }
+
+    .list {
+      .item {
+        padding: rem(13) 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        p {
+          font-size: rem(17);
+          line-height: rem(22);
+        }
+        div {
+          width: rem(20);
+          height: rem(20);
+          border-radius: 50%;
+          border: 1px solid #d5dadd;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .rateBox {
+    width: 100%;
+    padding: rem(16);
+    &.rateAnimation {
+      width: 100%;
+    }
+  }
+}

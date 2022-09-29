@@ -1,0 +1,129 @@
+@import "styles/unit.scss";
+
+.addressForm {
+  overflow: auto;
+  .dialogNewAddress {
+    position: relative;
+    width: rem(560);
+    padding: rem(20) rem(24);
+    p {
+      font-weight: 500;
+      font-size: rem(28);
+      line-height: rem(35);
+      margin-bottom: rem(20);
+    }
+    .close {
+      position: absolute;
+      right: rem(24);
+      top: rem(20);
+      cursor: pointer;
+    }
+
+    .form {
+      .search {
+        margin-bottom: rem(12);
+        input {
+          opacity: 1;
+        }
+      }
+      .searchForm {
+        position: relative;
+
+        .addressListPopover {
+          width: 100%;
+          box-shadow: 0px 1px 12px rgba(0, 0, 0, 0.08);
+          border-radius: rem(12);
+          max-height: rem(300);
+          overflow: auto;
+          position: absolute;
+          top: rem(60);
+          z-index: 999;
+          background-color: #fff;
+          .addressItem {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+            box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.06);
+            padding: rem(12);
+            cursor: pointer;
+            &:hover {
+              background-color: #f1f1f1;
+            }
+            .addressText {
+              p {
+                margin: 0;
+                &:first-child {
+                  font-size: rem(18);
+                  line-height: rem(24);
+                  font-weight: 500;
+                }
+                &:last-child {
+                  font-size: rem(14);
+                  line-height: rem(20);
+                }
+              }
+            }
+            .addressDistance {
+              font-size: rem(14);
+              line-height: rem(22);
+            }
+          }
+        }
+      }
+      .addressName {
+        margin-bottom: rem(12);
+      }
+      .addressOptions {
+        display: grid;
+        column-gap: rem(10);
+        grid-template-columns: auto auto auto;
+        .numberInput {
+          input::-webkit-outer-spin-button,
+          input::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+          }
+        }
+      }
+      .map {
+        margin: rem(18) 0 rem(24);
+      }
+      .buttons {
+        display: grid;
+        column-gap: rem(16);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .dialogNewAddress {
+      width: 100%;
+      padding: rem(16);
+      p {
+        max-width: rem(290);
+        font-weight: 500;
+        font-size: rem(24);
+        line-height: rem(32);
+        margin-bottom: rem(16);
+      }
+      .close {
+        position: absolute;
+        right: rem(16);
+        top: rem(16);
+        cursor: pointer;
+      }
+
+      .form {
+        .map {
+          margin: rem(20) 0 rem(24);
+        }
+        .buttons {
+          display: grid;
+          column-gap: rem(16);
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          direction: rtl;
+        }
+      }
+    }
+  }
+}

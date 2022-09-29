@@ -1,0 +1,80 @@
+@import 'styles/unit.scss';
+.button {
+  height: rem(48);
+  border-radius: rem(12);
+  font-weight: 500;
+  font-size: rem(17);
+  height: rem(46);
+  line-height: rem(22);
+  padding: rem(13) rem(18);
+  display: flex;
+  align-items: center;
+  column-gap: rem(10);
+  background: #f4f4f4;
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &.fullWidth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &.large {
+    height: rem(48);
+  }
+  &.medium {
+    height: rem(46);
+  }
+  &.small {
+    font-size: rem(15);
+    line-height: rem(18);
+  }
+  &:disabled,
+  &:disabled:hover {
+    transform: translateY(0) !important;
+    cursor: not-allowed;
+  }
+}
+
+.greenButton {
+  width: auto;
+  border-radius: rem(12);
+  font-weight: 500;
+  font-size: rem(17);
+  height: rem(46);
+  line-height: rem(22);
+  padding: rem(12) rem(18);
+  background: #22b573;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  column-gap: rem(10);
+  transition: all 0.25s ease-in-out;
+  &:hover {
+    transform: translateY(-1px);
+  }
+  &.fullWidth {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  &.large {
+    height: rem(48);
+  }
+  &.medium {
+    height: rem(46);
+  }
+  &.small {
+    font-size: rem(15);
+    line-height: rem(18);
+  }
+  &:disabled,
+  &:disabled:hover {
+    transform: translateY(0) !important;
+    background-color: #efefef;
+    color: #84919a;
+    cursor: not-allowed;
+    border: none !important;
+  }
+}

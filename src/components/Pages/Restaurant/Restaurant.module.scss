@@ -1,0 +1,73 @@
+@import "styles/unit.scss";
+.root {
+  position: relative;
+  .cart {
+    display: none;
+  }
+  .main {
+    background-color: #f9f9f9;
+    .banner {
+      padding: rem(24) 0 0;
+      display: grid;
+      //grid-template-columns: fr 2fr;
+      // column-gap: rem(25);
+    }
+    .tabs {
+      margin-top: rem(32);
+      padding-bottom: rem(40);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .isSearch {
+    width: 100%;
+    height: 100vh;
+    background: #f9f9f9;
+    position: relative;
+  }
+  .root {
+    .cart {
+      padding: rem(12);
+      background: var(--primary-color);
+      width: rem(48);
+      height: rem(48);
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      right: rem(16);
+      bottom: rem(16);
+      z-index: 10;
+      span {
+        position: absolute;
+        right: rem(-5);
+        top: rem(-5);
+        background: var(--danger-color);
+        color: #ffff;
+        border-radius: 50%;
+        width: rem(20);
+        height: rem(20);
+        font-size: rem(12);
+        line-height: rem(14);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+    .main {
+      .banner {
+        display: block;
+        padding: 0;
+      }
+      .rightCart {
+        display: none;
+      }
+      .tabs {
+        margin-top: rem(16);
+        padding-bottom: rem(22);
+      }
+    }
+  }
+}

@@ -1,0 +1,124 @@
+@import "styles/unit.scss";
+
+.login {
+  background: url("/images/login-bg.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  // background-size: rem(1700) rem(900);
+  background-size: cover;
+  background-color: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(1px);
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .box {
+    position: absolute;
+    width: rem(480);
+    padding: rem(12) rem(32) rem(24);
+    background-color: #fff;
+    border-radius: rem(12);
+    .timer {
+      font-size: rem(17);
+      line-height: rem(22);
+      color: #5b6871;
+      margin: rem(24) 0;
+      text-align: center;
+      cursor: pointer;
+    }
+    .close {
+      position: absolute;
+      right: rem(24);
+      top: rem(20);
+      cursor: pointer;
+    }
+    h1 {
+      margin-top: rem(48);
+      font-size: rem(28);
+      line-height: rem(35);
+      text-align: center;
+      color: #000000;
+      margin-bottom: rem(8);
+    }
+    p {
+      font-size: rem(17);
+      line-height: rem(22);
+      margin-bottom: rem(24);
+      color: var(--text-secondary-color);
+      text-align: center;
+    }
+    .input {
+      margin-bottom: rem(16);
+      label {
+        font-size: rem(15);
+        line-height: rem(24);
+        color: var(--text-secondary-color);
+        display: block;
+        margin-bottom: rem(4);
+      }
+      input {
+        background: #ffffff;
+        border: 1px solid #e5e9eb;
+        &:focus {
+          outline: none;
+          border-color: #22b573;
+        }
+        &:hover {
+          border-color: #22b573;
+        }
+      }
+    }
+    .button {
+      margin-top: rem(8);
+    }
+    .register {
+      font-size: rem(17);
+      line-height: rem(22);
+      margin-top: rem(24);
+      color: #6e6e6e;
+      display: flex;
+      justify-content: center;
+      a {
+        color: var(--primary-color);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .login {
+    .box {
+      width: calc(100% - 32px);
+      padding: rem(12) rem(16px) rem(24);
+      .timer {
+        margin: rem(16) 0;
+      }
+      .close {
+        right: rem(16);
+        top: rem(12);
+      }
+      h1 {
+        margin: rem(24) 0;
+        font-size: rem(22);
+        line-height: rem(28);
+      }
+      p {
+      }
+      .input {
+        margin-bottom: rem(12);
+      }
+      .button {
+        height: rem(48);
+        padding: rem(14) rem(10);
+        margin-top: rem(24);
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,125 @@
+@import "styles/unit.scss";
+.main {
+  background-color: #f9f9f9;
+  padding: rem(32) 0 rem(50);
+  .orderItem {
+    .title {
+      font-weight: 700;
+      font-size: rem(40);
+      line-height: rem(48);
+      margin-bottom: rem(32);
+      display: flex;
+      align-items: center;
+      color: #303940;
+    }
+  }
+  .steps {
+    padding: rem(28) rem(24);
+    background-color: #fff;
+    border-radius: rem(12);
+    margin-top: rem(32);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .infoBox {
+      .stepTitle {
+        font-weight: 500;
+        font-size: rem(28);
+        line-height: rem(35);
+      }
+      .processTitle {
+        display: block;
+        font-size: rem(17);
+        line-height: rem(22);
+        color: #5b6871;
+        margin-top: rem(4);
+      }
+    }
+    .list {
+      display: flex;
+      align-items: center;
+      div {
+        width: rem(17);
+        height: rem(4);
+        background: #d9d9d9;
+        border-radius: rem(2);
+        margin: 0 rem(4);
+      }
+    }
+  }
+  .orderInfo {
+    margin-top: rem(24);
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: rem(25);
+    .map {
+      height: rem(382);
+      padding: rem(12);
+      background-color: #fff;
+      border-radius: rem(12);
+      .yandexMap {
+        overflow: hidden;
+        height: 100%;
+        border-radius: rem(12);
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: rem(16) 0;
+    .orderItem {
+      .title {
+        font-weight: 700;
+        font-size: rem(24);
+        line-height: rem(32);
+        margin-bottom: rem(16);
+        color: #303940;
+      }
+    }
+    .steps {
+      padding: rem(16);
+      margin-top: rem(16);
+      flex-direction: column;
+      align-items: initial;
+      justify-content: initial;
+      .infoBox {
+        .stepTitle {
+          font-size: rem(17);
+          line-height: rem(25);
+        }
+        .processTitle {
+          font-size: rem(15);
+          line-height: rem(20);
+          margin-top: 0;
+        }
+      }
+      .list {
+        margin-top: rem(16);
+        svg {
+          width: rem(44);
+          height: rem(44);
+        }
+        div {
+          width: rem(24);
+          height: rem(5);
+          margin: 0 rem(8);
+        }
+      }
+    }
+    .orderInfo {
+      margin-top: rem(24);
+      display: flex;
+      flex-direction: column-reverse;
+      row-gap: rem(16);
+      .map {
+        padding: rem(8);
+        height: rem(193);
+        .yandexMap {
+          height: rem(177);
+        }
+      }
+    }
+  }
+}

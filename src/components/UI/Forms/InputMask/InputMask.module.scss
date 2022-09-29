@@ -1,0 +1,66 @@
+@import "styles/unit.scss";
+.inputBox {
+  position: relative;
+  width: 100%;
+  .input {
+    width: 100%;
+    padding: rem(12);
+    background: #f6f6f6;
+    border-radius: rem(10);
+
+    font-size: rem(15);
+    line-height: rem(24);
+    height: rem(48);
+    color: #252c32;
+    border: 1px solid transparent;
+    transition: all 0.25s ease-in-out;
+    &.withStartAdornment {
+      padding-left: rem(50);
+    }
+    &.withEndAdornment {
+      padding-right: rem(50);
+    }
+    &:focus {
+      outline: none;
+      border-color: #22b573 !important;
+    }
+    &:hover {
+      border-color: #22b573 !important;
+    }
+    &::placeholder {
+      font-size: rem(15);
+      line-height: rem(24);
+      color: #6e7c87;
+    }
+  }
+  .error {
+    border-color: var(--danger-color) !important;
+
+    &:focus {
+      outline: none;
+      border-color: var(--danger-color) !important;
+    }
+  }
+  span {
+    font-size: rem(12);
+    line-height: rem(16);
+    color: #f2271c;
+    margin-top: rem(4);
+  }
+
+  .startAdornment {
+    position: absolute;
+    left: rem(16);
+    height: rem(20);
+    top: calc(50% - rem(10));
+  }
+}
+
+@media (max-width: 768px) {
+  .inputBox {
+    .input {
+      padding: rem(10) rem(16);
+      color: #6e7c87;
+    }
+  }
+}

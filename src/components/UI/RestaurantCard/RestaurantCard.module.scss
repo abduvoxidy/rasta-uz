@@ -1,0 +1,154 @@
+@import "styles/unit.scss";
+.item {
+  padding: rem(10);
+  .card {
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+    border-radius: rem(12);
+    overflow: hidden;
+    cursor: pointer;
+    &.disabled {
+      cursor: default;
+    }
+    transition: all 0.2s ease-out 0s;
+    transform: none;
+    &:hover {
+      //will-change: transform;
+      transform: scale(1.03);
+      // .img {
+      //   img {
+
+      //   }
+      // }
+    }
+    .img {
+      height: rem(160);
+      position: relative;
+      .deliveryTime {
+        padding: rem(6) rem(12);
+        border-radius: rem(12);
+        background: rgba(0, 0, 0, 0.76);
+        backdrop-filter: blur(12px);
+        display: flex;
+        align-items: center;
+        column-gap: rem(8);
+        position: absolute;
+        font-weight: 500;
+        font-size: rem(15);
+        line-height: rem(20);
+        color: #fff;
+        bottom: rem(8);
+        right: rem(8);
+      }
+
+      &.closed {
+        img {
+          filter: brightness(0.3);
+        }
+      }
+      .closedRestaurant {
+        font-size: rem(22);
+        line-height: rem(28);
+        font-weight: 500;
+        color: #fff;
+        position: absolute;
+        top: calc(50% - rem(14));
+        left: calc(50% - rem(85));
+      }
+      .sale {
+        padding: rem(6) rem(12);
+        border-radius: rem(12);
+        background-color: #119c2b;
+        display: flex;
+        align-items: center;
+        font-weight: 500;
+        font-size: rem(15);
+        line-height: rem(22);
+        position: absolute;
+        color: #fff;
+        top: rem(8);
+        left: rem(8);
+      }
+    }
+    .body {
+      background-color: #fff;
+      padding: rem(12);
+      p {
+        font-weight: 500;
+        font-size: rem(22);
+        line-height: rem(30);
+        display: -webkit-box;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+      .shipper {
+        display: flex;
+        gap: rem(8);
+        margin-top: rem(10);
+        &_img {
+          width: rem(15);
+          height: rem(15);
+          object-fit: cover;
+        }
+        &_name {
+          font-size: rem(14);
+          font-weight: 400;
+          line-height: rem(18);
+        }
+      }
+      .options {
+        display: flex;
+        align-items: center;
+        column-gap: rem(12);
+        margin-top: rem(16);
+        .option {
+          display: flex;
+          align-items: center;
+          column-gap: rem(8);
+          padding: rem(8) rem(12);
+          background: #f1f1f1;
+          cursor: pointer;
+          border-radius: rem(12);
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .item {
+    padding: 0 rem(6);
+    // width: rem(241);
+    .card {
+      .img {
+        .deliveryTime {
+          height: rem(32);
+          font-size: rem(13);
+          padding: rem(6) rem(8);
+        }
+      }
+      .body {
+        padding: rem(12) rem(12) rem(16);
+        p {
+          font-size: rem(17);
+          line-height: rem(22);
+        }
+        .options {
+          column-gap: rem(12);
+          margin-top: rem(8);
+          .option {
+            font-size: rem(13);
+            line-height: rem(18);
+            padding: rem(6) rem(12);
+            font-weight: 500;
+            white-space: nowrap;
+            svg {
+              width: rem(20);
+              height: rem(20);
+            }
+          }
+        }
+      }
+    }
+  }
+}

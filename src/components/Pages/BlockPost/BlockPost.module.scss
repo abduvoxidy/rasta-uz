@@ -1,0 +1,12 @@
+@import "styles/unit.scss";
+
+.main {
+  padding: rem(24) 0 rem(82);
+  background-color: #f9f9f9;
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: rem(16) 0 rem(24);
+  }
+}

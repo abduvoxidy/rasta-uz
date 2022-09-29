@@ -1,0 +1,223 @@
+@import "styles/unit.scss";
+.main {
+  background-color: #f9f9f9;
+  padding: rem(32) 0 rem(50);
+  .orderItem {
+    width: 50%;
+    .title {
+      font-weight: 700;
+      font-size: rem(40);
+      line-height: rem(48);
+      margin-bottom: rem(32);
+      display: flex;
+      align-items: center;
+      .back {
+        display: flex;
+        svg {
+          font-size: rem(32);
+          margin-right: rem(10);
+        }
+      }
+    }
+    .expireTime {
+      font-size: rem(17);
+      line-height: rem(22);
+      color: var(--text-secondary-color);
+      margin: rem(12) 0 rem(32);
+    }
+  }
+}
+
+.orderInfo {
+  padding: rem(24);
+  background-color: #fff;
+  border-radius: rem(12);
+
+  .orderNumber {
+    font-weight: 500;
+    font-size: rem(20);
+    line-height: rem(25);
+  }
+  .addressInfo {
+    margin-top: rem(24);
+    box-shadow: inset 0px -1px 0px #e5e9eb;
+    padding-bottom: rem(16);
+    span {
+      display: block;
+      font-size: rem(17);
+      line-height: rem(22);
+      &:first-child {
+        margin-bottom: rem(8);
+        color: var(--text-secondary-color);
+      }
+    }
+  }
+  .innerTitle {
+    font-weight: 500;
+    font-size: rem(17);
+    line-height: rem(22);
+    margin-bottom: rem(12);
+  }
+  .paymentOptions {
+    padding-bottom: rem(16);
+    box-shadow: inset 0px -1px 0px #e5e9eb;
+    margin-top: rem(16);
+    .option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: rem(14);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      .withPromo {
+        display: flex;
+        align-items: center;
+        column-gap: rem(15);
+        span {
+          display: block;
+          &:first-child {
+            text-decoration: line-through;
+            color: #f2271c;
+          }
+        }
+      }
+      span {
+        font-size: rem(17);
+        line-height: rem(22);
+      }
+    }
+  }
+  .totalSum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: rem(14) 0 rem(24);
+    span {
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: rem(25);
+    }
+  }
+  button {
+    font-weight: 400;
+  }
+  .products {
+    padding: rem(16) 0;
+    box-shadow: inset 0px -1px 0px #e5e9eb;
+
+    .item {
+      margin-bottom: rem(12);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .price {
+        font-weight: 600;
+        font-size: rem(17);
+        line-height: rem(22);
+      }
+      .leftItem {
+        display: flex;
+        align-items: center;
+        .img {
+          position: relative;
+          height: rem(62);
+          width: rem(62);
+        }
+        .name {
+          margin-left: rem(12);
+          span {
+            display: block;
+            font-size: rem(17);
+            line-height: rem(22);
+            &:last-child {
+              font-size: rem(15);
+              line-height: rem(24);
+              color: var(--text-secondary-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    padding: rem(16) 0;
+    .orderItem {
+      width: 100%;
+      .title {
+        font-weight: 600;
+        font-size: rem(24);
+        line-height: rem(32);
+        margin-bottom: rem(8);
+        .back {
+          display: none;
+        }
+      }
+      .expireTime {
+        font-weight: 400;
+        font-size: rem(15);
+        margin: 0;
+        margin-bottom: rem(17);
+      }
+    }
+  }
+
+  // orderInfo
+  .orderInfo {
+    padding: rem(16);
+
+    .orderNumber {
+      font-weight: 600;
+      font-size: rem(17);
+      line-height: rem(22);
+    }
+    .addressInfo {
+      margin-top: rem(16);
+      padding-bottom: rem(16);
+    }
+    .innerTitle {
+      font-weight: 600;
+    }
+    .paymentOptions {
+      .option {
+        margin-bottom: rem(14);
+        span {
+          font-size: rem(15);
+          line-height: rem(20);
+          font-weight: 400;
+        }
+      }
+    }
+    .totalSum {
+      span {
+        font-size: rem(17);
+        line-height: rem(20);
+      }
+    }
+    button {
+      font-weight: 400;
+    }
+    .products {
+      padding: rem(16) 0;
+
+      .item {
+        .price {
+          font-size: rem(15);
+          line-height: rem(20);
+        }
+        .leftItem {
+          .img {
+            height: rem(64);
+            width: rem(64);
+          }
+        }
+      }
+    }
+  }
+}

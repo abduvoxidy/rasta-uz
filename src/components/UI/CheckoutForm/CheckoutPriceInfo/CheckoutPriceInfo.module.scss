@@ -1,0 +1,65 @@
+@import 'styles/unit.scss';
+
+.ordeInfo {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  .priceInfo {
+    position: sticky;
+    top: rem(96);
+    padding: rem(24) rem(16);
+    background-color: #fff;
+    border-radius: rem(12);
+    transition: all 0.3s ease-in-out;
+    // &.pinned {
+    //   top: rem(96);
+    // }
+    p {
+      font-weight: 600;
+      font-size: rem(20);
+      line-height: rem(25);
+      margin-bottom: rem(10);
+    }
+    .priceOptions {
+      display: flex;
+      flex-direction: column;
+      row-gap: rem(10);
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span {
+          font-size: rem(15);
+          line-height: rem(24);
+          &:last-child {
+            font-weight: 600;
+          }
+        }
+        &.withPromocode {
+          align-items: flex-start;
+        }
+        .price {
+          display: flex;
+          flex-direction: column;
+          span {
+            font-weight: 600;
+          }
+          &.promocodeSum {
+            span {
+              &:first-child {
+                text-decoration: line-through;
+                color: #f2271c;
+              }
+            }
+          }
+        }
+      }
+    }
+    button {
+      margin-top: rem(20);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+}

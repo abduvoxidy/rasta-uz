@@ -1,0 +1,60 @@
+@import "styles/unit.scss";
+
+.empty {
+  width: 84%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  //border-radius: rem(12);
+  background-color: transparent;
+  // padding: rem(24) 0;
+  img {
+    width: rem(240);
+    height: rem(240);
+    object-fit: contain;
+  }
+  p {
+    font-weight: 700;
+    font-size: rem(28);
+    line-height: rem(35);
+    margin-top: rem(24);
+    text-align: center;
+  }
+  span {
+    font-size: rem(17);
+    line-height: rem(22);
+    color: #5b6871;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    margin-top: rem(12);
+    width: rem(400);
+  }
+  button {
+    width: rem(396) !important;
+    margin-top: rem(24);
+  }
+}
+
+@media (max-width: 768px) {
+  .empty {
+    width: 100%;
+    img {
+      width: rem(200);
+      height: rem(200);
+      object-fit: contain;
+    }
+    p {
+      font-size: rem(24);
+      line-height: rem(32);
+      margin-top: rem(24);
+    }
+    span {
+      width: auto;
+    }
+    button {
+      width: auto !important;
+    }
+  }
+}

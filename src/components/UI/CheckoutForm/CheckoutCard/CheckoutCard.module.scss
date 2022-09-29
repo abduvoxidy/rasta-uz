@@ -1,0 +1,38 @@
+@import 'styles/unit.scss';
+
+.card {
+  padding: rem(24);
+  background-color: #fff;
+  border-radius: rem(12);
+  .title {
+    font-weight: 500;
+    font-size: rem(22);
+    line-height: rem(28);
+    margin-bottom: rem(24);
+  }
+  .delete {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    position: relative;
+    padding: rem(16);
+    border-radius: rem(12);
+    .title {
+      font-weight: 500;
+      font-size: rem(17);
+      line-height: rem(22);
+      margin-bottom: rem(16);
+    }
+    .delete {
+      display: block;
+      position: absolute;
+      right: rem(16);
+      top: rem(16);
+      cursor: pointer;
+      z-index: 1;
+    }
+  }
+}

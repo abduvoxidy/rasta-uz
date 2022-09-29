@@ -1,0 +1,51 @@
+@import 'styles/unit.scss';
+
+.sidebar {
+  padding: rem(16);
+  background-color: #fff;
+  border-radius: rem(12);
+  .list {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(8);
+    .item {
+      padding: rem(16) rem(12);
+      display: flex;
+      align-items: center;
+      column-gap: rem(16);
+      font-weight: 600;
+      font-size: rem(17);
+      line-height: rem(22);
+      color: #1a2024;
+      border-radius: rem(12);
+      transition: all 0.25s ease-in-out;
+      &:hover {
+        background: rgba(34, 181, 115, 0.08);
+        color: var(--primary-color);
+        svg {
+          path {
+            fill: var(--primary-color);
+          }
+        }
+      }
+      &.active {
+        background: rgba(34, 181, 115, 0.08);
+        color: var(--primary-color);
+        svg {
+          path {
+            fill: var(--primary-color);
+          }
+        }
+      }
+      svg {
+        width: rem(24);
+        height: rem(24);
+
+        path {
+          fill: #48535b;
+          transition: all 0.25s ease-in-out;
+        }
+      }
+    }
+  }
+}

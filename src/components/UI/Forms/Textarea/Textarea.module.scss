@@ -1,0 +1,36 @@
+@import "styles/unit.scss";
+.textareaBox {
+  position: relative;
+  width: 100%;
+  .textarea {
+    width: 100%;
+    padding: rem(12);
+    background: #ffffff;
+    border: 1px solid #e5e9eb;
+    border-radius: rem(10);
+    font-size: rem(15);
+    line-height: rem(24);
+    color: #252c32;
+
+    transition: all 0.25s ease-in-out;
+    &:focus {
+      outline: none;
+      border-color: #22b573;
+    }
+    &:hover {
+      border-color: #22b573;
+    }
+    &::placeholder {
+      font-size: rem(15);
+      line-height: rem(24);
+      color: #9aa6ac;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .textareaBox {
+    .textarea {
+    }
+  }
+}

@@ -1,0 +1,129 @@
+@import "unit";
+@import "../../public/fonts/font.css";
+
+:root {
+  --primary-color: #22b573;
+  --title-color: #000000;
+  --text-color: #525252;
+  --text-secondary-color: #5b6871;
+  --secondary-color: #200e32;
+  --bg-color: #f9f9f9;
+  --danger-color: #f76659;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+  scroll-behavior: smooth;
+}
+
+input,
+textarea,
+button {
+  font-family: "SF Pro Display", -apple-system, BlinkMacSystemFont, Segoe UI,
+    Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue,
+    sans-serif;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+p,
+ul,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+button,
+a {
+  border: none;
+  cursor: pointer;
+}
+
+.slick-disabled {
+  display: none !important;
+}
+
+.headroom-wrapper {
+  width: 100%;
+}
+
+.headroom {
+  z-index: 999 !important;
+  position: fixed !important;
+  transform: none !important;
+}
+
+.MuiModal-root {
+  // z-index: 99999 !important;
+}
+
+.slick-track {
+  margin: 0;
+}
+
+#yaMap {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.scrollBar {
+  &:hover {
+    &::-webkit-scrollbar-thumb {
+      background-color: #aaa;
+      &:hover {
+        background-color: #999;
+      }
+    }
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: rgba(26, 32, 36, 0.2);
+    border-radius: 6px;
+    transition: all 0.5s ease-in-out;
+  }
+}
+
+#banner .oneSlide {
+  .slick-list {
+    width: rem(619);
+    @media (max-width: 768px) {
+      width: auto;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  #banner .bannerSlick {
+    height: rem(162);
+    .slick-list {
+      height: rem(162);
+    }
+  }
+}

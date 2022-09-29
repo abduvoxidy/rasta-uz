@@ -1,0 +1,157 @@
+@import "styles/unit.scss";
+
+.address {
+  padding: rem(32) 0 rem(158);
+  background-color: #f9f9f9;
+  h1 {
+    font-weight: 700;
+    font-size: rem(40);
+    line-height: rem(48);
+    color: #303940;
+    margin-bottom: rem(32);
+  }
+  .box {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    column-gap: rem(25);
+    .rightBox {
+      border-radius: rem(12);
+      .button {
+        display: flex;
+        justify-content: flex-end;
+        margin-top: rem(24);
+      }
+      .list {
+        background-color: #fff;
+        padding: rem(24);
+        display: flex;
+        row-gap: rem(12);
+        flex-direction: column;
+
+        .item {
+          padding: rem(14) rem(16);
+          background: #f4f4f4;
+          border-radius: rem(12);
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .leftItem {
+            span {
+              display: block;
+              font-weight: 600;
+              font-size: rem(17);
+              line-height: rem(22);
+              &:last-child {
+                font-weight: 400;
+                font-size: rem(15);
+                line-height: rem(24);
+                color: #5b6871;
+              }
+            }
+          }
+          .rightItem {
+            display: flex;
+            align-items: center;
+            column-gap: rem(16);
+            svg {
+              cursor: pointer;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.dialog {
+  padding: rem(24);
+  width: rem(361);
+  p {
+    &:first-child {
+      font-weight: 600;
+      font-size: rem(22);
+      line-height: rem(28);
+    }
+    &:nth-child(2) {
+      font-size: rem(15);
+      margin-top: rem(12);
+      line-height: rem(18);
+      color: #5b6871;
+    }
+  }
+  .groupButton {
+    display: grid;
+    margin-top: rem(32);
+    column-gap: rem(12);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+// responsive
+
+@media (max-width: 768px) {
+  .address {
+    min-height: 40vh;
+    padding: rem(16) 0;
+    h1 {
+      font-weight: 700;
+      font-size: rem(24);
+      line-height: rem(32);
+      color: #303940;
+      margin-bottom: rem(16);
+    }
+    .box {
+      grid-template-columns: 1fr;
+      column-gap: 0;
+      .leftSide {
+        display: none;
+      }
+      .rightBox {
+        .button {
+          margin-top: rem(4);
+          display: flex;
+          justify-content: inherit;
+          button {
+            width: 100%;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            font-size: rem(15);
+            line-height: rem(20);
+          }
+        }
+        .list {
+          padding: rem(16);
+          border-radius: rem(12);
+          .item {
+            height: rem(64);
+            padding: rem(12);
+            .leftItem {
+              span {
+                display: block;
+                font-weight: 500;
+                font-size: rem(15);
+                white-space: nowrap;
+                width: rem(180);
+                overflow: hidden;
+                text-overflow: ellipsis;
+                &:last-child {
+                  font-weight: 400;
+                  font-size: rem(13);
+                  line-height: rem(20);
+                }
+              }
+            }
+            .rightItem {
+              column-gap: rem(8);
+            }
+          }
+        }
+      }
+    }
+  }
+  .dialog {
+    padding: rem(16);
+    width: 100%;
+  }
+}

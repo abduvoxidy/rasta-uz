@@ -1,0 +1,63 @@
+@import "styles/unit.scss";
+
+.promocodeBox {
+  .groups {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-end;
+    column-gap: rem(16);
+    .btn {
+      width: 30%;
+    }
+    .input {
+      width: 70%;
+      input {
+        background: #ffffff;
+        border: 1px solid #e5e9eb;
+        &:focus {
+          outline: none;
+          border-color: #22b573;
+        }
+        &:hover {
+          border-color: #22b573;
+        }
+      }
+      .error {
+        color: var(--danger-color);
+        font-size: rem(14);
+        line-height: rem(18);
+      }
+    }
+  }
+  .promocodeSuccess {
+    padding: rem(14) rem(16);
+    display: flex;
+    align-items: center;
+    column-gap: rem(16);
+    background: rgba(34, 181, 115, 0.08);
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: rem(15);
+    line-height: rem(22);
+    color: var(--primary-color);
+    margin-top: rem(18);
+  }
+}
+
+@media (max-width: 768px) {
+  .promocodeBox {
+    .groups {
+      display: flex;
+      flex-direction: column;
+      align-items: inherit;
+      justify-content: inherit;
+      gap: rem(16);
+      .btn {
+        width: 100%;
+      }
+      .input {
+        width: 100%;
+      }
+    }
+  }
+}

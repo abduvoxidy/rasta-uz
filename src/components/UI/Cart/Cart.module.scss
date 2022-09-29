@@ -1,0 +1,209 @@
+@import 'styles/unit.scss';
+.cartBox {
+  height: 100%;
+  position: relative;
+  padding-bottom: rem(46);
+  .box {
+    background-color: #fff;
+    border-radius: rem(12);
+    position: sticky;
+    overflow: hidden;
+    top: rem(96);
+    max-height: 83vh;
+    height: 83vh;
+    transition: all 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.02);
+    .root {
+      height: 100%;
+      display: flex;
+      background: #ffffff;
+      flex-direction: column;
+      .header {
+        display: flex;
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        padding: rem(16);
+        p {
+          font-weight: 600;
+          font-size: rem(22);
+          line-height: rem(28);
+        }
+        .delete {
+          cursor: pointer;
+        }
+      }
+      .emptyCart {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        p {
+          font-size: rem(17);
+          line-height: rem(20);
+          color: #9aa6ac;
+          width: 80%;
+          text-align: center;
+          margin-top: rem(10);
+        }
+      }
+      .body {
+        padding: 0 rem(16);
+        display: flex;
+        overflow: auto;
+        flex-grow: 1;
+        flex-direction: column;
+        &::-webkit-scrollbar {
+          width: 8px;
+          background: #f5f4f2;
+          -webkit-appearance: none;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: #dedddb;
+        }
+        .item {
+          display: flex;
+          align-items: center;
+          box-shadow: inset 0px -1px 0px rgba(0, 0, 0, 0.06);
+          padding-bottom: rem(16);
+          justify-content: space-between;
+          margin-top: rem(16);
+          align-items: center;
+          .ingredient {
+            font-size: rem(13);
+            font-weight: 400;
+            color: var(--text-secondary-color);
+          }
+          p {
+            font-size: 17px;
+            line-height: 22px;
+            color: #252c32;
+
+            &:last-child {
+              font-weight: 500;
+              margin-top: rem(6);
+              color: #1a2024;
+            }
+          }
+        }
+      }
+      .footer {
+        box-shadow: 0px -3px 16px rgba(0, 0, 0, 0.06);
+        .deliveryTime {
+          padding: rem(12);
+          .info {
+            &:first-child {
+              padding-top: 0;
+            }
+            padding: rem(8) 0;
+          }
+        }
+        .info {
+          padding: rem(12) 0;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .label {
+            display: flex;
+            align-items: center;
+            column-gap: rem(12);
+            .icon {
+              width: rem(40);
+              max-width: rem(40);
+              height: rem(40);
+              max-height: rem(40);
+              border-radius: rem(12);
+              background: #f4f4f4;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              svg {
+                width: rem(20);
+                height: rem(20);
+              }
+            }
+            span {
+              font-size: rem(17);
+              line-height: rem(22);
+              color: #3c464e;
+            }
+          }
+          .value {
+            font-size: rem(17);
+            line-height: rem(22);
+            //font-weight: 500;
+            color: #1a2024;
+          }
+        }
+        .totalSum {
+          padding: 0 rem(16) rem(16);
+          box-shadow: inset 0px 1px 0px #e5e9eb;
+          .info {
+            span {
+              font-weight: 500;
+            }
+          }
+          .button {
+            padding-top: rem(12);
+          }
+        }
+      }
+    }
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  .count {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: rem(15);
+    line-height: rem(22);
+  }
+  button {
+    font-size: rem(24);
+    display: flex;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    border-radius: rem(8);
+    margin-top: 0 !important;
+  }
+}
+
+.dialog {
+  padding: rem(24);
+  width: rem(361);
+  p {
+    &:first-child {
+      font-weight: 600;
+      font-size: rem(22);
+      line-height: rem(28);
+    }
+    &:nth-child(2) {
+      font-size: rem(15);
+      margin-top: rem(12);
+      line-height: rem(18);
+      color: #5b6871;
+    }
+  }
+  .groupButton {
+    display: grid;
+    margin-top: rem(32);
+    column-gap: rem(12);
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 768px) {
+  .dialog {
+    width: 100%;
+  }
+}

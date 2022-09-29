@@ -1,0 +1,27 @@
+@import "styles/unit.scss";
+
+.markerIcon {
+  position: absolute;
+  display: inline-block;
+  z-index: 100;
+  top: calc(50% - rem(42));
+  left: calc(50% - rem(21));
+  width: rem(42);
+  height: rem(42);
+  background: url("/icons/placemark.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: rem(42);
+}
+
+.mapBox {
+  height: rem(250);
+  width: 100%;
+  position: relative;
+}
+@media (max-width: 768px) {
+  .mapBox {
+    border-radius: rem(12);
+    overflow: hidden;
+  }
+}
